@@ -1,0 +1,36 @@
+Como funciona el asyncronismo en js
+JS solo puede ejecutar una tarea a la vez, pero puede delegar las tareas a otros procesos.
+Modelo de concurrencia se llama event lopp
+
+CallStack = > pila de ejecucion donde pone la llamada a funciones segun el orden de ejecución de nuestro 
+programa.
+Si una funcion llama a otra esta se agrega a la pila, cuando termina de ejecutar 
+una funcion js saca esta funcion de la pila y la bota.
+el callback es una funcion que js ejecutará cuando tenga la respuesta del servidor.
+Mientras el navegadorvuelve con la respuesta JS seguirá ejecutando el resto de tareas. Cuando vuelva la respuesta,
+está ira a dar a la cola de tareas, solo hasta que el programa se quede sin ejecución,este irá a buscar las tareas 
+pendientes a la cola de tareas. 
+No hay que generar cuello de botella en la pila de ejecución.
+
+NO VOY A BLOQUEAR EL EVENT LOOP!!!!
+
+JavaScript delega en el navegador ciertas tareas y les asocia funciones que deberán ser ejecutadas al ser 
+completadas. Estas funciones se llaman callbacks, y una vez que el navegador ha regresado con la respuesta, 
+el callback asociado pasa a la cola de tareas para ser ejecutado una vez que JavaScript 
+haya terminado todas las instrucciones que están en la pila de ejecución.
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"
+            //console.log('a')
+            //recibe la funcion y luego el delay expresado en milisegundos
+            //setTimeout(()=> console.log('b'), 0)
+            //setTimeout(()=> console.log('c'), 2000)
+            //for (let i = 0; i < 999; i++) {
+                
+            //}
+            //CDN (content delivery network): es un servidor que va a servir nuestro archivo desde el punto mas cercano
+            //enviará un request a ese servidor y este responderá con la ip mas cercana de donde está el archivo que buscamos
+    
+        </script>
